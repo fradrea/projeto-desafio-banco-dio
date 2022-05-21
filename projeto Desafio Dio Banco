@@ -1,0 +1,63 @@
+ classe  pública Agência {
+
+	 nome da string  privada ;
+	 Banco  privado ; _
+	privado  Cliente [] clientes ;
+	 ContaBancaria privada [] contas ;
+	 Atendente particular [] atendentes ;
+
+	public  Agencia ( String  ageNome , Banco  bc , int  tClientes , int  tContas , int  tAtendentes ){
+		isso . nome = idadeNome ;
+		isso . banco = b ;
+
+		// SETANDO A CAPACIDADE DA AGÊNCIA
+		isso . clientes = novo  Cliente [ tClientes ];
+		isso . contas = nova  ContaBancaria [ tContas ];
+		isso . atendentes = novo  Atendente [ tAtendentes ];
+
+		// POR PADRAO, A AGÊNCIA COMECA COM DOIS ATENDENTES
+		isso . atendentes [ 0 ] = new  Atendente ( "JavaX" , this );
+		isso . atendentes [ 1 ] = new  Atendente ( "JuremaX" , this );
+	}
+
+
+	public  String  getNome ()
+	{
+		devolva  isso . nome ;
+	}
+
+	public  void  setNome ( nome da string  )
+	{
+		isso . nome = nome ;
+	}
+
+
+	público  Banco  getBanco ()
+	{
+		devolva  isso . banco ;
+	}
+
+
+	público  Atendente acessoAtendente (  )
+	{
+		//RETORNANDO UM ATENDENTE ALEATORIO
+		devolver  atendentesDisponiveis ();
+	}
+
+	public  boolean  addAtendente ()
+	{
+		// VERIFICAR SE EXISTE ESPACO NO ARRAY DE ATENDNETES
+		retornar  falso ;
+	}
+
+	 Atendente  particular atendentesDisponiveis ()
+	{
+		//RETORNANDO UM ATENDENTE ALEATORIO
+		Aleatório  RD = new  Aleatório ();
+		intx  = 0 ; _
+		for ( int  i = 0 ; i < 1 ; i ++){
+			x = RD . nextInt ( this . atendentes . length );
+		}
+		devolva  isso . atendentes [ x ];
+	}
+}
